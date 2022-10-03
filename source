@@ -1,0 +1,29 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Loader = Instance.new("TextButton")
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.Position = UDim2.new(0.42592302, 0, 0.416213334, 0)
+Main.Size = UDim2.new(0, 205, 0, 70)
+Main.Active = true
+Main.Draggable = true
+
+Loader.Name = "Loader"
+Loader.Parent = Main
+Loader.BackgroundColor3 = Color3.fromRGB(120, 120, 120)
+Loader.BackgroundTransparency = 0.600
+Loader.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Loader.Position = UDim2.new(0.0585365854, 0, 0.214285716, 0)
+Loader.Size = UDim2.new(0, 181, 0, 40)
+Loader.Font = Enum.Font.Roboto
+Loader.Text = "Load CMD-X"
+Loader.TextColor3 = Color3.fromRGB(255, 255, 255)
+Loader.TextSize = 14.000
+Loader.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+end)
